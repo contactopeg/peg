@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Performance Excellence Group
+  </title>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Performance Excellence Group">
+  <meta name="keywords" content="bootstrap, business, consulting, coworking space, services">
+  <meta name="author" content="Ronny Portillo">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Page loading styles-->
+  <style>
+    .cs-page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .cs-page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cs-page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .cs-page-loading.active>.cs-page-loading-inner {
+      opacity: 1;
+    }
+
+    .cs-page-loading-inner>span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #737491;
+    }
+
+    .cs-page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #766df4;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <!-- Page loading scripts-->
+  <script>
+    (function () {
+      window.onload = function () {
+        var preloader = document.querySelector('.cs-page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 2000);
+      };
+    })();
+  </script>
+  <!-- Vendor Styles-->
+  <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+  <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+  <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="css/theme.min.css">
+</head>
+<!-- Body-->
+
+<body>
+  <!-- Page loading spinner-->
+  <div class="cs-page-loading active">
+    <div class="cs-page-loading-inner">
+      <div class="cs-page-spinner"></div><span>Cargando...</span>
+    </div>
+  </div>
+  <main class="cs-page-wrapper">
+   <!-- Navbar (Solid background)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header
+        class="cs-header navbar navbar-expand-lg navbar-light bg-light navbar-sticky"
+        data-scroll-header
+      >
+        <div class="container px-0 px-xl-3">
+
+          <button
+            class="navbar-toggler ml-n2 mr-2"
+            type="button"
+          >
+          <a class="social-btn sb-outline sb-lg sb-instagram mr-2 mb-2" target="_blank"
+          href="https://www.instagram.com/peg.ccs/"><i class="fe-instagram"></i></a><a
+          class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4"
+          href="index.html"
+          ></button
+          ><img
+              class="d-none d-lg-block"
+              width="153"
+              src="img/logo/logo-dark.png"
+              alt="Perfornabce Excellence Group" /><img
+              class="d-lg-none"
+              width="58"
+              src="img/logo/logo-icon.png"
+              alt="Perfornabce Excellence Group"
+          /></a>
+          <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+            <a
+              class="nav-link-style font-size-sm text-nowrap"
+              href="#Contactanos"
+              ><i class="fe-user font-size-xl mr-2"></i>Contacto</a
+            ><a
+              class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
+              href="#Contactanos"
+              ><i class="fas fa-briefcase font-size-xl mr-2"></i>
+              Empleo</a
+            >
+          </div>
+          <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="cs-offcanvas-cap navbar-box-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button
+                class="close lead"
+                type="button"
+                data-toggle="offcanvas"
+                data-offcanvas-id="primaryMenu"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="cs-offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega active">
+                  <a
+                    class="nav-link"
+                    href="#Servicios"
+                    >Servicios</a
+                  >
+                  <div class="dropdown-menu">
+                    <a
+                      class="dropdown-column dropdown-column-img bg-secondary"
+                      href="#Servicios"
+                      style="background-image: url(img/demo/menu-banner.jpg)"
+                    ></a>
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="#Servicios"
+                        >Educación Primaria</a
+                      ><a
+                        class="dropdown-item"
+                        href="#educacion-media"
+                        >Eduacación Media</a
+                      ><a class="dropdown-item" href="#educacion-superior"
+                        >Educación Superior</a
+                      >
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-mega">
+                  <a
+                    class="nav-link"
+                    href="#Ventajas"
+                    >Ventajas</a
+                  >
+                  <div class="dropdown-menu">
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Nuestras Ventajas</h5>
+                      <a class="dropdown-item" 
+                        >Buena pedagogía</a
+                      ><a class="dropdown-item" 
+                        >Comodidad para nuestros clientes</a
+                      ><a class="dropdown-item" 
+                        >Juventud</a
+                      ><a class="dropdown-item" 
+                        >Amplio portafolio de profesores</a
+                      ><a class="dropdown-item" 
+                        >Diversas modalidades de clase</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    href="#Testimonios"
+                    >Testimonios</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    href="#Clientes"
+                    >Clientes</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    href="#Preguntas"
+                    >Preguntas Frecuentes</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- Page content-->
+    <!-- Hero-->
+    <section class="container-fluid px-0 pb-5 pb-md-6">
+      <div class="row no-gutters align-items-xl-center">
+        <div class="col-lg-6 col-md-7 text-right order-md-2"><img class="d-inline-block" width="945"
+            src="img/demo/business-consulting/hero-img.jpg" alt="Business people"/>
+        </div>
+        <div class="col-lg-6 col-md-5 pt-5 pb-3 py-md-5">
+          <div class="mx-auto mr-md-5 mr-xl-7 pl-3 py-md-3 order-md-1" style="max-width: 450px;">
+            <h1 class="mb-grid-gutter pb-1">¡Bienvenidos!</h1>
+            <p class="cs-callout d-block d-md-none d-lg-block font-size-lg text-muted mb-grid-gutter">
+              Somos un grupo de jóvenes profesionales que iniciamos este proyecto en el año 2017
+              cuando éramos estudiantes universitarios, ofreciendo ayuda académica a estudiantes de
+              educación primaria y secundaria de diferentes colegios en Caracas.
+            </p>
+
+            <p class="cs-callout d-block d-md-none d-lg-block font-size-lg text-muted mb-grid-gutter">
+
+              Nuestros servicios consisten en clases particulares dictadas por jóvenes profesionales y
+              estudiantes de la UNIMET, UCAB y UCV ofreciéndole a los padres y representantes
+              excelencia y buen rendimiento académico de sus representados sin la necesidad de salir
+              de sus casas; nuestros profesores se acercan hasta el lugar de su preferencia en toda
+              Caracas, en cualquier horario y cualquier día de la semana.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+          <!-- CTA-->
+          <section class="bg-secondary bg-size-cover py-5 py-md-6" style="background-image: url(img/demo/business-consulting/cta-bg.png);">
+            <div class="container py-3 py-md-0">
+              <div class="row align-items-center">
+                <div class="col-lg-12 col-md-6 text-center">
+                  <h2 class="mb-1 pb-3 pb-md-0 mb-md-0">Excellence Builds Perfection</h2>
+                </div>
+              </div>
+            </div>
+          </section>
+    <!-- Servicios-->
+    <section id="Servicios" class="container pt-3">
+      <h1 class="h2 pt-4 pt-md-5 mt-2">Educación Primaria</h1>
+    </section>
+    <div class="container">
+      <!--Educación Primaria-->
+      <section class="pt-4 mt-lg-2 pb-lg-4">
+        <div class="cs-carousel cs-controls-inside cs-controls-onhover mb-4 mb-lg-0">
+          <div class="cs-carousel-inner"
+            data-carousel-options="{&quot;items&quot;: 1, &quot;controls&quot;: true, &quot;nav&quot;: true, &quot;gutter&quot;: 30}">
+            <div><img class="d-block w-100 rounded-lg" src="img/portfolio/single/slider/Educacion basica.png"
+                alt="Project image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Materias-->
+
+      <section class="py-3">
+        <h4 class="text-center mb-5">Materias que abarcamos</h4>
+        <div class="row pb-md-2">
+          <div class="col-md-4">
+            <ul>
+              <li>Matemática</li>
+              <li>Lenguaje</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul>
+              <li>Historia</li>
+              <li>Contabilidad</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul>
+              <li>Inglés</li>
+              <li>Métodos de Estudio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section id="educacion-media" class="container pt-3">
+      <h1 class="h2 pt-4 pt-md-5 mt-2">Educación Media</h1>
+    </section>
+    <div class="container">
+      <!--Educación Media-->
+      <section class="pt-4 mt-lg-2 pb-lg-4">
+        <div class="cs-carousel cs-controls-inside cs-controls-onhover mb-4 mb-lg-0">
+          <div class="cs-carousel-inner"
+            data-carousel-options="{&quot;items&quot;: 1, &quot;controls&quot;: true, &quot;nav&quot;: true, &quot;gutter&quot;: 30}">
+            <div><img class="d-block w-100 rounded-lg" src="img/portfolio/single/slider/Educacion media.png"
+                alt="Project image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Materias-->
+
+      <section class="py-3">
+        <h4 class="text-center mb-5">Materias que abarcamos</h4>
+        <div class="row pb-md-2">
+          <div class="col-md-4">
+            <ul>
+              <li>Matemática</li>
+              <li>Física</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul>
+              <li>Química</li>
+              <li>Contabilidad</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul>
+              <li>Informática</li>
+              <li>Inglés</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="educacion-superior" class="container pt-3">
+      <h1 class="h2 pt-4 pt-md-5 mt-2">Educación Superior</h1>
+    </section>
+    <div class="container">
+      <!--Educación Superior-->
+      <section class="pt-4 mt-lg-2 pb-lg-4">
+        <div class="cs-carousel cs-controls-inside cs-controls-onhover mb-4 mb-lg-0">
+          <div class="cs-carousel-inner"
+            data-carousel-options="{&quot;items&quot;: 1, &quot;controls&quot;: true, &quot;nav&quot;: true, &quot;gutter&quot;: 30}">
+            <div><img class="d-block w-100 rounded-lg" src="img/portfolio/single/slider/01.jpg" alt="Project image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Materias-->
+      <section class="py-3">
+        <h4 class="text-center mb-5">Materias que abarcamos</h4>
+        <div class="row pb-md-2">
+          <div class="col-md-4">
+            <ul>
+              <li>Cálculo Diferencial</li>
+              <li>Cálculo Integral</li>
+              <li>Cálculo Vectorial</li>
+              <li>Ecuaciones Diferenciales</li>
+              <li>Álgebra Lineal</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul>
+              <li>Estadística</li>
+              <li>Termodinámica</li>
+              <li>Mecánica de Fluidos</li>
+              <li>Física General</li>
+              <li>Química General</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul>
+              <li>Química Orgánica</li>
+              <li>Química Inorgánica</li>
+              <li>Principios de Ingeniería Química</li>
+              <li>Geometría Descriptiva</li>
+              <li>Programación</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--Habilidades-->
+    <section id = "Ventajas" class="container py-5 py-md-2 py-lg-2 my-3">
+      <div class="row align-items-center">
+        <div class="col-lg-4 col-md-5 text-center text-md-left mb-5 mb-md-0">
+          <h2 class="mb-3">Nuestras Ventajas</h2>
+          <p class="text-muted mb-4 pb-2" style="text-align: justify;">Performance Excellence Group ofrece cinco
+            ventajas a la hora de prestar sus servicios,
+            que ayudan a obtener mejores resultados académicos en las distintas materias de
+            enfoque de la empresa, buscando siempre construir la excelencia académica en nuestros
+            clientes.</p>
+        </div>
+        <div class="col-lg-8 col-md-7 bg-position-center bg-no-repeat"
+          style="background-image: url(img/demo/business-consulting/services/bg-shape.svg);">
+          <div class="mx-auto" style="max-width: 610px;">
+            <div class="row align-items-center">
+              <div class="col-sm-6">
+                <div class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"><img
+                    class="d-inline-block mb-4 mt-2" width="100"
+                    src="img/demo/business-consulting/services/pedagogia.svg" alt="Icon" />
+                  <h3 class="h5 mb-2"> Buena pedagogía </h3>
+                  <p class="font-size-sm" style="text-align: justify;">Los profesores que forman parte de nuestro equipo
+                    cuentan con los
+                    conocimientos y las
+                    herramientas necesarias para asegurar un buen entendimiento de los temas a estudiar.
+                    Los profesores aplican metodologías creativas y distintas para asegurarse que el alumno
+                    comprende la asignatura.</p>
+                </div>
+                <div class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"><img
+                    class="d-inline-block mb-4 mt-2" width="100"
+                    src="img/demo/business-consulting/services/comodidad.svg" alt="Icon" />
+                  <h3 class="h5 mb-2"> Comodidad para nuestros clientes </h3>
+                  <p class="font-size-sm" style="text-align: justify;">Ofrecemos clases a domicilio en todas las zonas
+                    de Caracas adaptándonos al horario de
+                    conveniencia de nuestros clientes. Nuestros servicios están disponibles los siete días de
+                    la semana.</p>
+                </div>
+                <div class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"><img
+                    class="d-inline-block mb-4 mt-2" width="100"
+                    src="img/demo/business-consulting/services/juventud.svg" alt="Icon" />
+                  <h3 class="h5 mb-2"> Juventud </h3>
+                  <p class="font-size-sm" style="text-align: justify;">Nuestros profesores son jóvenes profesionales o
+                    estudiantes en su último año
+                    de carrera
+                    de algunas de las universidades más prestigiosas del país, como lo son la UCV, USB, UNIMET
+                    y UCAB. La visión de nuestra empresa es lograr un vínculo de confianza profesor-alumno
+                    para facilitar la comunicación a la hora de las clases.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"><img
+                    class="d-inline-block mb-4 mt-2" width="100"
+                    src="img/demo/business-consulting/services/portafolio.svg" alt="Icon" />
+                  <h3 class="h5 mb-2">Amplio portafolio de profesores</h3>
+                  <p class="font-size-sm" style="text-align: justify;">Contamos con una variedad de profesores
+                    especializados en cada una de las
+                    áreas para
+                    brindar a nuestros clientes una alta calidad del servicio. Cada profesor es asignado a un
+                    área (educación primaria, media o superior) para utilizar la metodología de aprendizaje
+                    adecuada según la edad de nuestros clientes y la materia de estudio elegida. </p>
+                </div>
+                <div class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"><img
+                    class="d-inline-block mb-4 mt-2" width="100"
+                    src="img/demo/business-consulting/services/modalidades.svg" alt="Icon" />
+                  <h3 class="h5 mb-2"> Diversas modalidades de clase </h3>
+                  <p class="font-size-sm" style="text-align: justify;">Ofrecemos clases particulares y en grupos de
+                    hasta tres (3) personas cubriendo
+                    diversas
+                    materias de educación primaria, media y superior a precios accesibles para todos los
+                    hogares. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials-->
+    <section id="Testimonios" class="container my-2 py-5 py-md-6 py-lg-7">
+      <h2 class="text-center mb-5">Testimonios</h2>
+      <div class="row justify-content-center">
+        <div class="col-xl-11">
+          <div class="cs-carousel">
+            <div class="cs-carousel-inner"
+              data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;nav&quot;: false}">
+              <!-- Item-->
+              <div>
+                <div class="pb-3 pb-md-0 pl-md-7 ml-md-3">
+                  <div class="bg-size-cover bg-position-center rounded-lg py-7"
+                    style="background-image: url(img/demo/business-consulting/testimonials/01.jpg);">
+                    <div class="d-md-flex align-items-center ml-md-n7 text-center text-md-left">
+                      <div
+                        class="card card-body d-none d-md-flex py-grid-gutter px-grid-gutter border-0 box-shadow-lg mr-6 cs-scale-up"
+                        style="max-width: 23rem; text-align: justify;">
+                        <blockquote class="blockquote">
+                          <p>Desde el tercer año de bachillerato, recibí apoyo en matemática, física y química de parte
+                            de los profesores de <em>Performance Excellence Group</em> porque necesitaba mantener un alto
+                            promedio para poder optar a una beca en Alemania. Durante 3 años, recibí una
+                            excelente ayuda y logré mi objetivo. Los recomiendo ciegamente.</p>
+                          <footer class="blockquote-footer">Claudia Marcano - Colegio Mater Salvatoris</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-none mt-n6 px-3 cs-scale-up">
+                    <div class="card card-body py-grid-gutter px-grid-gutter border-0 box-shadow mx-auto"
+                      style="max-width: 23rem; text-align: justify;">
+                      <blockquote class="blockquote">
+                        <p>Desde el tercer año de bachillerato, recibí apoyo en matemática, física y química de parte
+                          de los profesores de <em>Performance Excellence Group</em> porque necesitaba mantener un alto
+                          promedio para poder optar a una beca en Alemania. Durante 3 años, recibí una
+                          excelente ayuda y logré mi objetivo. Los recomiendo ciegamente.</p>
+                        <footer class="blockquote-footer">Claudia Marcano - Colegio Mater Salvatoris</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item-->
+              <div>
+                <div class="pb-3 pb-md-0 pl-md-7 ml-md-3">
+                  <div class="bg-size-cover bg-position-center rounded-lg py-7"
+                    style="background-image: url(img/demo/business-consulting/testimonials/02.jpg);">
+                    <div class="d-md-flex align-items-center ml-md-n7 text-center text-md-left">
+                      <div
+                        class="card card-body d-none d-md-flex py-grid-gutter px-grid-gutter border-0 box-shadow-lg mr-6 cs-scale-up"
+                        style="max-width: 23rem; text-align: justify;">
+                        <blockquote class="blockquote">
+                          <p>Durante mi último año de bachillerato estaba teniendo problemas con matemática y física.
+                            Varios de mis amigos me habían dado buenas referencias de los profesores de
+                            <em>Performance Excellence Group</em> y no dudé en llamarlos. Con su ayuda, logré aprender
+                            aprobar mis materias. Excelente servicio!</p>
+                          <footer class="blockquote-footer">Marcos Togni - Colegio San Ignacio</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-none mt-n6 px-3 cs-scale-up">
+                    <div class="card card-body py-grid-gutter px-grid-gutter border-0 box-shadow mx-auto"
+                      style="max-width: 23rem; text-align: justify;">
+                      <blockquote class="blockquote">
+                        <p>Durante mi último año de bachillerato estaba teniendo problemas con matemática y física.
+                          Varios de mis amigos me habían dado buenas referencias de los profesores de
+                          <em>Performance Excellence Group</em> y no dudé en llamarlos. Con su ayuda, logré aprender
+                          aprobar mis materias. Excelente servicio!</p>
+                        <footer class="blockquote-footer">Marcos Togni - Colegio San Ignacio</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item-->
+              <div>
+                <div class="pb-3 pb-md-0 pl-md-7 ml-md-3">
+                  <div class="bg-size-cover bg-position-center rounded-lg py-7"
+                    style="background-image: url(img/demo/business-consulting/testimonials/04.jpg);">
+                    <div class="d-md-flex align-items-center ml-md-n7 text-center text-md-left">
+                      <div
+                        class="card card-body d-none d-md-flex py-grid-gutter px-grid-gutter border-0 box-shadow-lg mr-6 cs-scale-up"
+                        style="max-width: 23rem; text-align: justify;">
+                        <blockquote class="blockquote">
+                          <p>Recibí clases de matemática, física y química con mis amigos en 3er, 4to y 5to año del
+                            colegio. Logré mantener buenas notas durante todo ese tiempo. Los recomiendo.</p>
+                          <footer class="blockquote-footer">Paula Castro - Colegio San Ignacio</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-none mt-n6 px-3 cs-scale-up">
+                    <div class="card card-body py-grid-gutter px-grid-gutter border-0 box-shadow mx-auto"
+                      style="max-width: 23rem; text-align: justify;">
+                      <blockquote class="blockquote">
+                        <p>Recibí clases con una amiga en 3er, 4to y 5to año del colegio, especialmente con
+                          matemática y física. Logré mantener buenas notas durante todo ese tiempo.</p>
+                        <footer class="blockquote-footer">Paula Castro - Colegio San Ignacio</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients-->
+    <section id = "Clientes" class="container pt-2 pt-md-0 pb-5 pb-md-6 pb-lg-7">
+      <h2 class="text-center mb-5">Clientes Principales</h2>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-6 text-center"><a class="cs-swap-image mb-grid-gutter"><img
+              class="cs-swap-to" width="120" src="img/demo/event-landing/partners/01_color.png" alt="Logo" /><img
+              class="cs-swap-from" width="120" src="img/demo/event-landing/partners/01_gray.png" alt="Logo" /></a></div>
+        <div class="col-md-4 col-sm-4 col-6 text-center"><a class="cs-swap-image mb-grid-gutter" ><img
+              class="cs-swap-to" width="176" src="img/demo/event-landing/partners/05_color.png" alt="Logo" /><img
+              class="cs-swap-from" width="176" src="img/demo/event-landing/partners/05_gray.png" alt="Logo" /></a></div>
+        <div class="col-md-4 col-sm-4 col-6 text-center"><a class="cs-swap-image mb-grid-gutter" ><img
+              class="cs-swap-to" width="176" src="img/demo/event-landing/partners/06_color.png" alt="Logo" /><img
+              class="cs-swap-from" width="176" src="img/demo/event-landing/partners/06_gray.png" alt="Logo" /></a></div>
+        <div class="col-md-4 col-sm-4 col-6 text-center"><a class="cs-swap-image mb-grid-gutter" ><img
+              class="cs-swap-to" width="176" src="img/demo/event-landing/partners/04_color.png" alt="Logo" /><img
+              class="cs-swap-from" width="176" src="img/demo/event-landing/partners/04_gray.png" alt="Logo" /></a></div>
+        <div class="col-md-4 col-sm-4 col-6 text-center"><a class="cs-swap-image mb-grid-gutter" ><img
+              class="cs-swap-to" width="100" src="img/demo/event-landing/partners/02_color.png" alt="Logo" /><img
+              class="cs-swap-from" width="100" src="img/demo/event-landing/partners/02_gray.png" alt="Logo" /></a></div>
+        <div class="col-md-4 col-sm-4 col-6 text-center"><a class="cs-swap-image mb-grid-gutter" ><img
+              class="cs-swap-to" width="100" src="img/demo/event-landing/partners/03_color.png" alt="Logo" /><img
+              class="cs-swap-from" width="100" src="img/demo/event-landing/partners/03_gray.png" alt="Logo" /></a></div>
+    </section>
+
+    <!-- FAQ-->
+    <section id="Preguntas" class="container py-5 my-4 my-sm-0 py-sm-6 py-md-7">
+      <h2 class="text-center pb-2 mb-5">Preguntas Frecuentes</h2>
+      <div class="row pb-2">
+        <div class="col-lg-6">
+          <div class="accordion accordion-alt" id="faq-accordion">
+            <div class="card border-0 box-shadow">
+              <div class="card-header">
+                <h3 class="accordion-heading"><a href="#questionOne" role="button"
+                    data-toggle="collapse" aria-controls="questionOne">¿Cuál es la duración de las
+                    clases?<span class="accordion-indicator"></span></a></h3>
+              </div>
+              <div class="collapse show" id="questionOne" data-parent="#faq-accordion">
+                <div class="card-body font-size-md" style="text-align: justify;">Nuestras clases tienen una duración de mínimo dos (2) horas (120
+                  minutos). Sin embargo, nos
+                  adaptamos a las necesidades de nuestros clientes en caso de requerir una clase de mayor duración
+                  antes de sus exámenes.</div>
+              </div>
+            </div>
+            <div class="card border-0 box-shadow card-active">
+              <div class="card-header">
+                <h3 class="accordion-heading"><a class="collapsed" href="#questionTwo" role="button" data-toggle="collapse"
+                    aria-expanded="true" aria-expanded="true" aria-controls="questionTwo">¿Se dictan clases grupales?<span
+                      class="accordion-indicator"></span></a></h3>
+              </div>
+              <div class="collapse" id="questionTwo" data-parent="#faq-accordion">
+                <div class="card-body font-size-md" style="text-align: justify;">Si, nuestros servicios abarcan clases particulares y grupales de
+                  hasta tres (3) personas. Las tarifas
+                  varían dependiendo de la cantidad de alumnos, ofreciendo una tarifa más económica por persona
+                  para aquellas clases grupales.</div>
+              </div>
+            </div>
+            <div class="card border-0 box-shadow">
+              <div class="card-header">
+                <h3 class="accordion-heading"><a class="collapsed" href="#questionThree" role="button"
+                    data-toggle="collapse" aria-expanded="true" aria-controls="questionThree">¿Con cuánto tiempo de
+                    anticipación debo solicitar las clases?<span class="accordion-indicator"></span></a></h3>
+              </div>
+              <div class="collapse" id="questionThree" data-parent="#faq-accordion">
+                <div class="card-body font-size-md" style="text-align: justify;">Recomendamos solicitar las clases con al menos 24 horas de
+                  anticipación para planificar la
+                  logística adecuada. Al momento de solicitar la clase deben indicar los temas a estudiar para
+                  asignarle al profesor más adecuado.</div>
+              </div>
+            </div>
+            <div class="card border-0 box-shadow">
+              <div class="card-header">
+                <h3 class="accordion-heading"><a class="collapsed" href="#questionFour" role="button"
+                    data-toggle="collapse" aria-expanded="true" aria-controls="questionFour">¿Hay que buscar a los
+                    profesores en algún lugar?<span class="accordion-indicator"></span></a></h3>
+              </div>
+              <div class="collapse" id="questionFour" data-parent="#faq-accordion">
+                <div class="card-body font-size-md" style="text-align: justify;">No, nuestros servicios incluyen la logística asociada al traslado de
+                  los profesores. Un día antes de
+                  la clase, el equipo de Performance Excellence Group se pone en contacto con el estudiante para
+                  que nos envíe la dirección y llegar sin ningún problema a la hora acordada.</div>
+              </div>
+            </div>
+            <div class="card border-0 box-shadow">
+              <div class="card-header">
+                <h3 class="accordion-heading"><a class="collapsed" href="#questionFive" role="button"
+                    data-toggle="collapse" aria-expanded="true" aria-controls="questionFive">¿Puedo usar los servicios de Performance Excellence Group a pesar de no vivir en Caracas?<span class="accordion-indicator"></span></a></h3>
+              </div>
+              <div class="collapse" id="questionFive" data-parent="#faq-accordion">
+                <div class="card-body font-size-md" style="text-align: justify;">Si, ofrecemos clases online para aquellas personas que prefieran esta modalidad y estén ubicadas en otro estado del país o en el exterior.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-5 offset-lg-1"><img src="img/demo/booking/illustration.svg"
+            alt="Illustration" />
+        </div>
+      </div>
+    </section>
+    <!-- Split Careers + Subscription-->
+    <section id="Contactanos" class="container py-5 py-md-6 py-lg-7">
+      <div class="row no-gutters py-3 py-md-0">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="d-flex flex-column h-100 rounded-left bg-position-left-center bg-no-repeat py-6"
+            style="background-image: url(img/demo/business-consulting/careers-bg.jpg); background-color: #f4f4f6;"><span
+              class="d-sm-none d-md-block d-lg-none bg-overlay rounded-left bg-secondary" style="opacity: 1;"></span>
+            <div class="text-center mx-auto mr-sm-5 mr-md-0 mr-md-auto mr-lg-5 pr-lg-3 bg-overlay-content"
+              style="max-width: 240px;">
+              <h2 class="mb-4 pb-2">Contáctanos</h2><a class="btn btn-primary" target="_blank"
+                href="https://api.whatsapp.com/send/?phone=%2B584141131644&text&app_absent=0">WhatsApp <i class="fab fa-whatsapp" style="font-size:24px"></i></a>
+              <br><br>
+              <a class="btn btn-primary" target="_blank" href="mailto:contacto@performanceexcellencegroup.com">Correo
+                📧</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex flex-column h-100 rounded-right bg-dark px-4 py-5">
+            <div class="py-2 mx-auto text-center" style="max-width: 450px;">
+              <h2 class="text-light">Empleo</h2>
+              <p class="text-light mb-4">Si deseas ser parte de nuestro equipo, te invitamos a enviar tu <em>curriculum
+                  vitae</em>
+                actualizado a nuestra dirección de correo electrónico
+              </p>
+
+              <p class="text-light mb-4" style="font-size: 14px"><em>contacto@performanceexcellencegroup.com</em></p>
+
+              <a class="btn btn-success" target="_blank" href="mailto:contacto@performanceexcellencegroup.com">Enviar CV
+                💼</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer-->
+  <footer class="cs-footer container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-5 col-md-4 mb-5 text-center text-md-left">
+        <div class="pt-2">
+          <h4>Redes Sociales</h4>
+          <a class="social-btn sb-outline sb-lg sb-instagram mr-2 mb-2" target="_blank"
+            href="https://www.instagram.com/peg.ccs/"><i class="fe-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-top py-4">
+      <div class="d-md-flex align-items-center justify-content-between py-2 text-center text-md-left">
+        <ul class="list-inline font-size-sm mb-3 mb-md-0 order-md-2">
+          <li><a href="mailto:contacto@performanceexcellencegroup.com">contacto@performanceexcellencegroup.com</a></li>
+        </ul>
+        <p class="font-size-sm mb-0 mr-3 order-md-1"><span class="text-muted mr-1">© All rights reserved. Made
+            by</span><a class="nav-link-style font-weight-normal" href="https://portilloronny6.github.io/website/"
+            target="_blank" rel="noopener">Ronny
+            Portillo</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span
+      class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span><i class="btn-scroll-top-icon fe-arrow-up">
+    </i></a>
+  <!-- Vendor scrits: js libraries and plugins-->
+  <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+  <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+  <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+  <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+  <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+  <!-- Main theme script-->
+  <script src="js/theme.min.js"></script>
+</body>
+
+</html>
